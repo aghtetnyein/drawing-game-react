@@ -1,8 +1,8 @@
 import { useOnDraw } from "../hooks/CanvasHook";
 
 interface ICanvasProps {
-  width: number;
-  height: number;
+  width: number | string;
+  height: number | string;
   children?: React.ReactNode;
 }
 
@@ -42,7 +42,7 @@ const Canvas = ({ width, height, children }: ICanvasProps) => {
 
   return (
     <canvas
-      className="border border-gray-400"
+      className="rounded-lg"
       width={width}
       height={height}
       ref={setCanvasRef}
